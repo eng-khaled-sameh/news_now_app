@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_now/widget/categorys_list_view.dart';
+import 'package:news_now/widget/Categories_list_view.dart';
 import 'package:news_now/widget/news_list_view_builder.dart';
 
 class NewsNowBody extends StatelessWidget {
@@ -11,7 +11,7 @@ class NewsNowBody extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(child: CategorysListView()),
+          SliverToBoxAdapter(child: CategoriesListView()),
           NewsListViewBuilder(category: 'general'),
         ],
       ),

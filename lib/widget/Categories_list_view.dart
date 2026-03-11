@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:news_now/models/categories_model.dart';
-import 'package:news_now/widget/news_card_category.dart';
+import 'package:news_now/widget/category_card.dart';
 
-class CategorysListView extends StatelessWidget {
-  CategorysListView({super.key});
+class CategoriesListView extends StatelessWidget {
+  CategoriesListView({super.key});
 
   final List<CategoriesModel> categories = [
     CategoriesModel(

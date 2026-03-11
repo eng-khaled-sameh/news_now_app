@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_now/widget/news_now_body.dart';
+import 'package:news_now/widget/home_body.dart';
 import 'package:news_now/widget/title_app_bar.dart';
 
 class HomeNewsNowApp extends StatelessWidget {
