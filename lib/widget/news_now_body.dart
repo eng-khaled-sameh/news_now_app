@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_now/widget/categorys_list_view.dart';
-import 'package:news_now/widget/news_list_view.dart';
+import 'package:news_now/widget/news_list_view_builder.dart';
 
 class NewsNowBody extends StatelessWidget {
   const NewsNowBody({super.key});
@@ -13,13 +12,9 @@ class NewsNowBody extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: CategorysListView()),
-          NewsListView(),
+          NewsListViewBuilder(),
         ],
       ),
-
-      // child: Column(
-      //   children: [CategorysListView(), SizedBox(height: 8), NewsListView()],
-      // ),
     );
   }
 }

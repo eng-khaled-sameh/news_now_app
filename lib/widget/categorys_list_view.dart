@@ -1,40 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:news_now/models/category_model.dart';
+import 'package:news_now/models/categories_model.dart';
 import 'package:news_now/widget/news_card_category.dart';
 
 class CategorysListView extends StatelessWidget {
   CategorysListView({super.key});
 
-  final List<CategoryModel> categories = [
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/business.avif',
-      categoryName: 'Business',
+  final List<CategoriesModel> categories = [
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/Sports.png',
+      titleCategory: 'Sports',
     ),
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/entertaiment.avif',
-      categoryName: 'Entertaiment',
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/Health.png',
+      titleCategory: 'Health',
     ),
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/general.avif',
-      categoryName: 'General',
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/Science.png',
+      titleCategory: 'Science',
     ),
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/health.avif',
-      categoryName: 'Health',
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/Technology.png',
+      titleCategory: 'Technology',
     ),
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/science.avif',
-      categoryName: 'Science',
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/Business.png',
+      titleCategory: 'Business',
     ),
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/sports.avif',
-      categoryName: 'Sports',
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/Entertaiment.png',
+      titleCategory: 'Entertaiment',
     ),
-    const CategoryModel(
-      imageAssetUrl: 'assets/images/technology.jpeg',
-      categoryName: 'Technology',
+    CategoriesModel(
+      imageCategoryUrl: 'assets/images/General.png',
+      titleCategory: 'General',
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
