@@ -13,7 +13,7 @@ class NewsCard extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return ArticleDetailScreen();
+              return ArticleDetailScreen(article: article);
             },
           ),
         );
@@ -30,38 +30,46 @@ class NewsCard extends StatelessWidget {
                       height: 180,
                       width: double.infinity,
                       fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Image.asset(
+                          'assets/images/test.avif',
+                          height: 180,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        );
+                      },
                     )
                   : Image.asset(
                       'assets/images/test.avif',
-                      height: 200,
+                      height: 180,
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               article.title,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black87,
                 fontFamily: 'Serif',
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             article.subTitle != null
                 ? Text(
                     article.subTitle!,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Serif',
-                      color: const Color.fromARGB(255, 102, 101, 101),
+                      color: Color.fromARGB(255, 102, 101, 101),
                       fontSize: 14,
                     ),
                   )
-                : Text(''),
+                : const SizedBox.shrink(),
           ],
         ),
       ),

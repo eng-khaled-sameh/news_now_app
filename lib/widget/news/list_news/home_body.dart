@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_now/widget/Categories_list_view.dart';
-import 'package:news_now/widget/news_list_view_builder.dart';
+import 'package:news_now/widget/news/categoris_list/Categories_list_view.dart';
+import 'package:news_now/widget/news/list_news/news_list_view_builder.dart';
 
 class NewsNowBody extends StatelessWidget {
   const NewsNowBody({super.key});

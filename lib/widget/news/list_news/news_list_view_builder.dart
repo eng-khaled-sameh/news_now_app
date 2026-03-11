@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_now/models/artical_model.dart';
 import 'package:news_now/service/news_service.dart';
-import 'package:news_now/widget/news_list_view.dart';
+import 'package:news_now/widget/news/list_news/news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder({super.key, required this.category});
