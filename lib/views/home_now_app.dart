@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_now/widget/news/list_news/home_body.dart';
 import 'package:news_now/widget/title_app_bar.dart';
-import 'package:news_now/views/weather_view_builder.dart';
+import 'package:news_now/widget/weather/weather_body.dart';
 
 class HomeNewsNowApp extends StatelessWidget {
   const HomeNewsNowApp({super.key});
@@ -36,7 +36,7 @@ class HomeNewsNowApp extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const WeatherViewBuilder(),
+                          builder: (context) => const WeatherBody(),
                         ),
                       );
                     },

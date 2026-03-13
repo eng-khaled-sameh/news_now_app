@@ -38,6 +38,9 @@ dependencies:
   url_launcher: ^6.3.2
   geolocator: ^14.0.2
   flutter_bloc: ^9.1.1
+  flutter_launcher_icons: ^0.14.4
+  equatable: ^2.0.8
+  flutter_native_splash: ^2.4.7
 
 dev_dependencies:
   flutter_test:
@@ -90,3 +93,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: assets/images/logo.png
+  adaptive_icon_background: "#ffffff"
+  remove_alpha_ios: true
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/logo.png
+  android_12: 
+    image: assets/images/logo.png
+    color: "#ffffff"
