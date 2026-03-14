@@ -1,40 +1,91 @@
-# News Now & Weather 📰🌤️
-**A multi-service mobile application providing real-time global news and live weather updates.**
+# 🗞️ News Now
+
+[![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
+[![BLoC](https://img.shields.io/badge/State%20Management-BLoC-blue?style=for-the-badge)](https://pub.dev/packages/flutter_bloc)
+
+A professional, feature-rich news application built with Flutter that provides real-time news updates, weather information, and a seamless user experience with offline support.
 
 ---
 
-# 📰 News Now - Modern News & Weather App
+## 📽️ Preview
 
-**News Now** is a professional, high-performance mobile application built with **Flutter**. It provides users with real-time news updates across various categories and live weather information, featuring a sleek UI and robust architecture.
+![Project Demo](assets/news_now_gif/news%20now.gif)
 
 ---
-
-## 📸 App Showcase
-<p align="center">
-  <img src="assets/screenshots/app_pages_light/home.jpg" width="200" alt="Home Light">
-  <img src="assets/screenshots/app_pages_dark/home.jpg" width="200" alt="Home Dark">
-</p>
 
 ## ✨ Key Features
-* **Global News Aggregator:** Browse top stories in Sports, Tech, Health, Business, and more.
-* **🌍 World Weather Search:** Real-time weather data (Temperature, Humidity, Conditions) for any city globally.
-* **External Link Support:** Seamlessly open full news articles in the system browser using **url_launcher**.
-* **Real-time Updates:** Powered by live REST APIs for both News and Weather data.
-* **Responsive UI:** A clean, modern interface designed for a smooth user experience.
 
-## 🛠 Tech Stack & Tools
-* **Framework:** [Flutter](https://flutter.dev/)
-* **State Management:** **Cubit / Bloc** (Ensuring a predictable and reactive UI).
-* **Networking:** [Dio](https://pub.dev/packages/dio) (Handling multiple API integrations).
-* **External Actions:** [url_launcher](https://pub.dev/packages/url_launcher) (To launch web URLs and external applications safely).
-* **APIs Integrated:** * [NewsAPI.org](https://newsapi.org/) for global headlines.
-    * [OpenWeatherMap](https://openweathermap.org/) (or your used weather provider) for live weather data.
+-   **🏠 Dynamic Home Screen**: Featured news slider with the latest headlines and weather integration.
+-   **🔍 Smart Search**: Search for news articles or weather conditions by city name.
+-   **📂 Category Browsing**: News organized by categories (Business, Entertainment, General, Health, Science, Sports, Technology).
+-   **🌙 Dark & Light Mode**: Full support for system-wide themes with a premium design.
+-   **💾 Offline Access**: Powered by **Hive**, news and images are cached for reading even without an internet connection.
+-   **🌦️ Weather Integration**: Real-time weather data displayed on the home page and searchable via city.
+-   **📰 Article Details**: Clean, modern article view with web previews and sharing capabilities.
+-   **🚀 Performance**: Smooth animations and shimmer effects for a premium loading experience.
 
-## 📂 Project Architecture
-```text
-lib/
-├── cubits/        # Logic for News and Weather states
-├── models/        # Models for News articles & Weather data
-├── views/         # UI screens (Home, Weather, Details)
-├── widgets/       # Custom reusable components
-└── services/      # Service layer for Dio and API calls
+---
+
+## 🛠️ Tech Stack
+
+-   **Frontend**: Flutter (Dart)
+-   **State Management**: `flutter_bloc` (Cubit/BLoC pattern)
+-   **Networking**: `dio` for robust API requests.
+-   **Local Storage**: `hive` for high-performance offline caching.
+-   **UI Enhancements**:
+    -   `shimmer` for skeleton loaders.
+    -   `marquee` for scrolling headlines.
+    -   `cached_network_image` for image optimization.
+-   **Utilities**: `url_launcher`, `share_plus`, `equatable`.
+
+---
+
+## 📸 Screenshots Gallery
+
+| Home Screen | News Search | Weather Search |
+| :---: | :---: | :---: |
+| ![Home](assets/screenshots/home.jpg) | ![Search](assets/screenshots/news_search.jpg) | ![Weather](assets/screenshots/weather_search.jpeg) |
+
+| Article Details | Category View | Home (Dark) |
+| :---: | :---: | :---: |
+| ![Article](assets/screenshots/article_details.jpg) | ![Category](assets/screenshots/category.jpg) | ![Home Dark](assets/screenshots/home_dark.jpg) |
+
+| Weather (Dark) | Search (Dark) | Article (Dark) |
+| :---: | :---: | :---: |
+| ![Weather Dark](assets/screenshots/weather_search_dark.jpg) | ![Search Dark](assets/screenshots/news_search_exception_dark.jpeg) | ![Article Dark](assets/screenshots/article_details_dark.jpg) |
+
+---
+
+## 🚀 How to Run
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/eng-khaled-sameh/news_now.git
+    ```
+2.  **Navigate to the project directory**:
+    ```bash
+    cd news_now
+    ```
+3.  **Install dependencies**:
+    ```bash
+    flutter pub get
+    ```
+4.  **Run the application**:
+    ```bash
+    flutter run
+    ```
+
+---
+
+## 👨‍💻 Author
+
+**Khaled Sameh**
+-   GitHub: [@eng-khaled-sameh](https://github.com/eng-khaled-sameh)
+-   LinkedIn: [Khaled Sameh](https://www.linkedin.com/in/khaled-sameh-1aab53373)
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -8,15 +8,15 @@ class NewsService {
 
   Future<List<ArticleModel>> getHeadLines({required String category}) async {
     final String baseUrl = 'https://newsapi.org/v2';
-    final String apiKay = '479f7de9231d4b74b4d6fe782fe4ab5a';
+    final String apiKey = '479f7de9231d4b74b4d6fe782fe4ab5a';
     final box = Hive.box('news_cache');
 
     try {
       var response = await dio.get(
-        '$baseUrl/top-headlines?country=us&apiKey=$apiKay&category=$category',
+        '$baseUrl/top-headlines?country=us&apiKey=$apiKey&category=$category',
       );
-      Map<String, dynamic> josonDataNews = response.data;
-      List<dynamic> articles = josonDataNews['articles'];
+      Map<String, dynamic> jsonDataNews = response.data;
+      List<dynamic> articles = jsonDataNews['articles'];
       List<ArticleModel> articlesList = [];
 
       for (var article in articles) {
@@ -45,14 +45,14 @@ class NewsService {
 
   Future<List<ArticleModel>> getSearchNews({required String query}) async {
     final String baseUrl = 'https://newsapi.org/v2';
-    final String apiKay = '479f7de9231d4b74b4d6fe782fe4ab5a';
+    final String apiKey = '479f7de9231d4b74b4d6fe782fe4ab5a';
 
     try {
       var response = await dio.get(
-        '$baseUrl/everything?q=$query&apiKey=$apiKay',
+        '$baseUrl/everything?q=$query&apiKey=$apiKey',
       );
-      Map<String, dynamic> josonDataNews = response.data;
-      List<dynamic> articles = josonDataNews['articles'];
+      Map<String, dynamic> jsonDataNews = response.data;
+      List<dynamic> articles = jsonDataNews['articles'];
       List<ArticleModel> articlesList = [];
 
       for (var article in articles) {
