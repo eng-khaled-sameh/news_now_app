@@ -23,18 +23,16 @@ class NewsService {
         ArticleModel articleModel = ArticleModel.fromJson(article);
         articlesList.add(articleModel);
       }
-      
-      // Save to Hive Cache
+
       await box.put(category, jsonEncode(articles));
 
       return articlesList;
     } catch (e) {
-      // Load from cache if API request fails (e.g., offline)
       if (box.containsKey(category)) {
         String cachedData = box.get(category);
         List<dynamic> cachedArticles = jsonDecode(cachedData);
         List<ArticleModel> articlesList = [];
-        
+
         for (var article in cachedArticles) {
           ArticleModel articleModel = ArticleModel.fromJson(article);
           articlesList.add(articleModel);

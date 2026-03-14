@@ -21,8 +21,8 @@ class ArticleDetailScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.share_rounded),
             onPressed: () {
-              final shareText = '${article.title}\n\nRead more at:\n${article.url ?? ""}';
-              // ignore: deprecated_member_use
+              final shareText =
+                  '${article.title}\n\nRead more at:\n${article.url ?? ""}';
               Share.share(shareText);
             },
           ),
@@ -62,4 +62,3 @@ class ArticleDetailScreen extends StatelessWidget {
     );
   }
 }
-
