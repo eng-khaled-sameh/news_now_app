@@ -78,11 +78,20 @@ A professional, feature-rich news application built with Flutter that provides r
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 About the Developer
 
-**Khaled Sameh**
--   GitHub: [@eng-khaled-sameh](https://github.com/eng-khaled-sameh)
--   LinkedIn: [Khaled Sameh](https://www.linkedin.com/in/khaled-sameh-1aab53373)
+### **Khaled Sameh**
+*Telecommunication and Electronics Engineering student (4th year) at Obour Higher Institute for Engineering and Technology.*
+
+I am an aspiring engineer with a strong interest in **mobile networks, wireless communication systems, and telecommunications technologies**, in addition to gaining professional experience in **mobile app development using Flutter**.
+
+#### 🎓 Current Focus & Training:
+* Currently enhancing my technical skills through **NTI scholarships**, including **Mobile Communication** training and **Flutter development** training.
+* I am actively seeking internships and practical training opportunities to further develop my skills and gain real-world experience in the telecommunications and software engineering fields.
+
+#### 🔗 Connect with me:
+-   **GitHub**: [@eng-khaled-sameh](https://github.com/eng-khaled-sameh)
+-   **LinkedIn**: [Khaled Sameh](https://www.linkedin.com/in/khaled-sameh-1aab53373)
 
 ---
 
