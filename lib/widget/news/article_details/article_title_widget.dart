@@ -10,11 +10,13 @@ class ArticleTitleWidget extends StatelessWidget {
     return Text(
       title,
       style: const TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.w800,
-        fontFamily: 'Serif',
+        fontSize: 24,
+        fontWeight: FontWeight.w900,
+        letterSpacing: -0.5,
         height: 1.3,
+        color: Colors.black87,
       ),
     );
   }
 }
+

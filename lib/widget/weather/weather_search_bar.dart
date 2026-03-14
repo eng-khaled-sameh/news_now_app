@@ -9,13 +9,13 @@ class WeatherSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onSubmitted: onSearch,
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.black87),
       decoration: InputDecoration(
         hintText: 'Search for a city...',
-        hintStyle: const TextStyle(color: Colors.white70),
-        prefixIcon: const Icon(Icons.search, color: Colors.white70),
+        hintStyle: const TextStyle(color: Colors.black54),
+        prefixIcon: const Icon(Icons.search, color: Colors.black54),
         filled: true,
-        fillColor: Colors.white.withOpacity(0.2),
+        fillColor: Colors.grey.withValues(alpha: 0.1),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide.none,
@@ -25,3 +25,4 @@ class WeatherSearchBar extends StatelessWidget {
     );
   }
 }
+

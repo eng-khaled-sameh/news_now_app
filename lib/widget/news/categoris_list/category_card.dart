@@ -19,25 +19,45 @@ class NewsCardCategory extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: EdgeInsetsGeometry.only(right: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
         child: Container(
+          width: 155,
+          height: 95,
           decoration: BoxDecoration(
-            color: Colors.blueGrey,
-            borderRadius: BorderRadiusGeometry.circular(8),
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.2),
+                blurRadius: 8,
+                offset: const Offset(0, 4),
+              ),
+            ],
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(category.imageCategoryUrl),
             ),
           ),
-          width: 155,
-          height: 95,
-          child: Center(
-            child: Text(
-              category.titleCategory,
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [
+                  Colors.black.withValues(alpha: 0.7),
+                  Colors.transparent,
+                ],
+              ),
+            ),
+            child: Center(
+              child: Text(
+                category.titleCategory,
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.2,
+                ),
               ),
             ),
           ),

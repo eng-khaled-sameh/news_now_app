@@ -15,43 +15,45 @@ class ArticleDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const TitleAppBar()),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
+      backgroundColor: const Color(0xFFF8F9FA),
+      appBar: AppBar(
+        title: const TitleAppBar(),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        iconTheme: const IconThemeData(color: Colors.black87),
+      ),
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ArticleImageWidget(imageUrl: article.image),
-                  const SizedBox(height: 22),
+                  const SizedBox(height: 28),
                   ArticleTitleWidget(title: article.title),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 4),
-                    child: Divider(thickness: 1),
-                  ),
+                  const SizedBox(height: 24),
                   AuthorInformation(
                     authorName: article.author,
                     publishedAt: article.publishedAt,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 4),
-                    child: Divider(thickness: 1),
-                  ),
+                  const SizedBox(height: 28),
                   ArticleContentWidget(
                     subTitle: article.subTitle,
                     content: article.content,
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 48),
                   ReadMoreButton(articleUrl: article.url),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 40),
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 }
+

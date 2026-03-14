@@ -15,7 +15,7 @@ class WeatherHeader extends StatelessWidget {
           cityName,
           style: const TextStyle(
             fontSize: 32,
-            color: Colors.white,
+            color: Colors.black87,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -24,7 +24,7 @@ class WeatherHeader extends StatelessWidget {
           date,
           style: const TextStyle(
             fontSize: 18,
-            color: Colors.white70,
+            color: Colors.black54,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -33,7 +33,7 @@ class WeatherHeader extends StatelessWidget {
           condition,
           style: const TextStyle(
             fontSize: 28,
-            color: Colors.white,
+            color: Colors.black87,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -41,3 +41,4 @@ class WeatherHeader extends StatelessWidget {
     );
   }
 }
+

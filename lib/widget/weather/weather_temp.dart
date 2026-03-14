@@ -12,9 +12,10 @@ class WeatherTemp extends StatelessWidget {
       style: const TextStyle(
         fontSize: 80,
         fontWeight: FontWeight.bold,
-        color: Colors.white,
+        color: Colors.black87,
         height: 1.0,
       ),
     );
   }
 }
+

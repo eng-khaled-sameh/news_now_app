@@ -12,32 +12,33 @@ class WeatherView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              WeatherHeader(
-                cityName: weatherModel.cityName,
-                date: weatherModel.date,
-                condition: weatherModel.condition,
-              ),
-              const SizedBox(height: 24),
-              WeatherIcon(iconUrl: weatherModel.iconUrl),
-              const SizedBox(height: 16),
-              WeatherTemp(tempC: weatherModel.tempC),
-              const SizedBox(height: 48),
-              WeatherDetailsCard(
-                humidity: weatherModel.humidity,
-                maxTemp: weatherModel.maxTemp,
-                minTemp: weatherModel.minTemp,
-              ),
-            ],
-          ),
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            WeatherHeader(
+              cityName: weatherModel.cityName,
+              date: weatherModel.date,
+              condition: weatherModel.condition,
+            ),
+            const SizedBox(height: 12),
+            WeatherIcon(iconUrl: weatherModel.iconUrl),
+            const SizedBox(height: 8),
+            WeatherTemp(tempC: weatherModel.tempC),
+            const SizedBox(height: 24),
+            WeatherDetailsCard(
+              humidity: weatherModel.humidity,
+              maxTemp: weatherModel.maxTemp,
+              minTemp: weatherModel.minTemp,
+            ),
+            const SizedBox(height: 16),
+          ],
         ),
       ),
     );
   }
 }
+

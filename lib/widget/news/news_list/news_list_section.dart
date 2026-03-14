@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_now/cubit/news/news_cubit.dart';
 import 'package:news_now/cubit/news/news_state.dart';
-import 'package:news_now/widget/news/list_news/news_list_view.dart';
+import 'package:news_now/widget/news/news_list/news_list_view.dart';
 
 class NewsListSection extends StatelessWidget {
   const NewsListSection({super.key, required this.category});
