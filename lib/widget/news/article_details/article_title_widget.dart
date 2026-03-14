@@ -9,12 +9,12 @@ class ArticleTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.w900,
         letterSpacing: -0.5,
         height: 1.3,
-        color: Colors.black87,
+        color: Theme.of(context).textTheme.headlineMedium?.color,
       ),
     );
   }

@@ -13,27 +13,27 @@ class WeatherHeader extends StatelessWidget {
       children: [
         Text(
           cityName,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 32,
-            color: Colors.black87,
+            color: Theme.of(context).textTheme.headlineLarge?.color,
             fontWeight: FontWeight.bold,
           ),
         ),
         const SizedBox(height: 8),
         Text(
           date,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 18,
-            color: Colors.black54,
+            color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.7),
             fontWeight: FontWeight.w500,
           ),
         ),
         const SizedBox(height: 16),
         Text(
           condition,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 28,
-            color: Colors.black87,
+            color: Theme.of(context).textTheme.headlineMedium?.color,
             fontWeight: FontWeight.w600,
           ),
         ),

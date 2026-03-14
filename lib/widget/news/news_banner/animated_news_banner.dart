@@ -67,16 +67,22 @@ class _AnimatedNewsBannerState extends State<AnimatedNewsBanner> {
               margin: const EdgeInsets.only(top: 16.0, bottom: 8.0),
               height: 80,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withValues(alpha: 0.15),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white.withValues(alpha: 0.05)
+                        : Colors.grey.withValues(alpha: 0.15),
                     blurRadius: 10,
                     offset: const Offset(0, 4),
                   ),
                 ],
-                border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
+                border: Border.all(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white.withValues(alpha: 0.1)
+                      : Colors.grey.withValues(alpha: 0.1),
+                ),
               ),
               child: Row(
                 children: [

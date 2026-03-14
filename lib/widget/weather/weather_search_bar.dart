@@ -9,18 +9,36 @@ class WeatherSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onSubmitted: onSearch,
-      style: const TextStyle(color: Colors.black87),
+      style: TextStyle(color: Theme.of(context).textTheme.bodyMedium?.color),
       decoration: InputDecoration(
-        hintText: 'Search for a city...',
-        hintStyle: const TextStyle(color: Colors.black54),
-        prefixIcon: const Icon(Icons.search, color: Colors.black54),
-        filled: true,
-        fillColor: Colors.grey.withValues(alpha: 0.1),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide.none,
+        labelText: 'Search for Weather',
+        labelStyle: TextStyle(
+          color: Theme.of(context).textTheme.bodyMedium?.color,
+          fontWeight: FontWeight.w500,
         ),
-        contentPadding: const EdgeInsets.symmetric(vertical: 0),
+        floatingLabelBehavior: FloatingLabelBehavior.auto,
+        hintText: 'Enter city name...',
+        hintStyle: TextStyle(color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.4)),
+        prefixIcon: Icon(Icons.search, color: Theme.of(context).iconTheme.color),
+        filled: true,
+        fillColor: Theme.of(context).cardColor,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: Theme.of(context).dividerColor.withValues(alpha: 0.1),
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: Theme.of(context).dividerColor.withValues(alpha: 0.1),
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: Colors.orange, width: 1.5),
+        ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       ),
     );
   }

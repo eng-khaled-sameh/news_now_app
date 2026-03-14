@@ -9,10 +9,10 @@ class WeatherTemp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       '${tempC.round()}°C',
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 80,
         fontWeight: FontWeight.bold,
-        color: Colors.black87,
+        color: Theme.of(context).textTheme.displayLarge?.color,
         height: 1.0,
       ),
     );

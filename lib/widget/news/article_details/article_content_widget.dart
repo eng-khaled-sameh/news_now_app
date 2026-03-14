@@ -15,18 +15,17 @@ class ArticleContentWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 12),
             decoration: const BoxDecoration(
-              border: Border(
-                left: BorderSide(color: Colors.orange, width: 4),
-              ),
+              border: Border(left: BorderSide(color: Colors.orange, width: 4)),
             ),
             child: Text(
               subTitle!,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
                 height: 1.4,
-                color: Colors.black54,
-                fontStyle: FontStyle.italic,
+                color: Theme.of(
+                  context,
+                ).textTheme.bodyLarge?.color?.withValues(alpha: 0.7),
               ),
             ),
           ),
@@ -35,11 +34,11 @@ class ArticleContentWidget extends StatelessWidget {
         if (content != null && content!.isNotEmpty) ...[
           Text(
             content!,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 17,
               height: 1.7,
               letterSpacing: 0.3,
-              color: Color(0xFF333333),
+              color: Theme.of(context).textTheme.bodyMedium?.color,
             ),
           ),
         ],
@@ -47,4 +46,3 @@ class ArticleContentWidget extends StatelessWidget {
     );
   }
 }
-

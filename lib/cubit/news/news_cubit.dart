@@ -20,4 +20,18 @@ class NewsCubit extends Cubit<NewsState> {
       emit(NewsFailure(e.toString()));
     }
   }
+
+  Future<void> getSearchNews({required String query}) async {
+    emit(NewsLoading());
+    try {
+      final articles = await _newsService.getSearchNews(query: query);
+      if (articles.isNotEmpty) {
+        emit(NewsLoaded(articles));
+      } else {
+        emit(const NewsFailure('No search results found.'));
+      }
+    } catch (e) {
+      emit(NewsFailure(e.toString()));
+    }
+  }
 }

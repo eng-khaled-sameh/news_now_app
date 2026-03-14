@@ -5,7 +5,7 @@ import 'package:news_now/widget/news/article_details/article_image_widget.dart';
 import 'package:news_now/widget/news/article_details/article_title_widget.dart';
 import 'package:news_now/widget/news/article_details/read_more_button.dart';
 import 'package:news_now/widget/news/article_details/author_information.dart';
-import 'package:news_now/widget/title_app_bar.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ArticleDetailScreen extends StatelessWidget {
   final ArticleModel article;
@@ -15,13 +15,19 @@ class ArticleDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
-        title: const TitleAppBar(),
-        backgroundColor: Colors.white,
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        iconTheme: const IconThemeData(color: Colors.black87),
+        title: const Text('Details'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.share_rounded),
+            onPressed: () {
+              final shareText = '${article.title}\n\nRead more at:\n${article.url ?? ""}';
+              // ignore: deprecated_member_use
+              Share.share(shareText);
+            },
+          ),
+          const SizedBox(width: 8),
+        ],
       ),
       body: CustomScrollView(
         slivers: [

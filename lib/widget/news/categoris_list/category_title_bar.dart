@@ -21,11 +21,11 @@ class CategoryTitleBar extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             category,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.w800,
               letterSpacing: 0.5,
-              color: Colors.black87,
+              color: Theme.of(context).textTheme.bodyLarge?.color,
             ),
           ),
         ],

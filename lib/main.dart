@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_now/views/home_now_app.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:news_now/cubit/theme/theme_cubit.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox('news_cache');
   runApp(const NewsNowApp());
 }
 
@@ -10,9 +16,37 @@ class NewsNowApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeNewsNowApp(),
+    return BlocProvider(
+      create: (context) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeMode>(
+        builder: (context, themeMode) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            themeMode: themeMode,
+            theme: ThemeData(
+              brightness: Brightness.light,
+              fontFamily: 'Poppins',
+              scaffoldBackgroundColor: const Color(0xFFF8F9FA),
+              appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                iconTheme: IconThemeData(color: Colors.black87),
+              ),
+            ),
+            darkTheme: ThemeData(
+              brightness: Brightness.dark,
+              fontFamily: 'Poppins',
+              scaffoldBackgroundColor: const Color(0xFF121212),
+              appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                iconTheme: IconThemeData(color: Colors.white),
+              ),
+            ),
+            home: const HomeNewsNowApp(),
+          );
+        },
+      ),
     );
   }
 }

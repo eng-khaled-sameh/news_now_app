@@ -9,13 +9,13 @@ class TitleAppBar extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           'News',
           style: TextStyle(
             fontSize: 26,
             fontWeight: FontWeight.w800,
             letterSpacing: -0.5,
-            color: Colors.black87,
+            color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black87,
           ),
         ),
         const SizedBox(width: 4),

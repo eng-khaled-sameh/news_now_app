@@ -21,11 +21,13 @@ class NewsCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(top: 24, left: 4, right: 4),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.1),
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white.withValues(alpha: 0.05)
+                  : Colors.black.withValues(alpha: 0.1),
               blurRadius: 10,
               offset: const Offset(0, 5),
             ),
@@ -67,8 +69,8 @@ class NewsCard extends StatelessWidget {
                     article.title,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: Colors.black87,
+                    style: TextStyle(
+                      color: Theme.of(context).textTheme.titleLarge?.color,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       height: 1.3,
@@ -81,7 +83,7 @@ class NewsCard extends StatelessWidget {
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        color: Colors.grey[700],
+                        color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.7),
                         fontSize: 14,
                         height: 1.4,
                       ),

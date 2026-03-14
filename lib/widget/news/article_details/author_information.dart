@@ -16,9 +16,13 @@ class AuthorInformation extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
-        color: Colors.grey.withValues(alpha: 0.05),
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
+        border: Border.all(
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.white.withValues(alpha: 0.1)
+              : Colors.grey.withValues(alpha: 0.1),
+        ),
       ),
       child: Row(
         children: [
@@ -35,17 +39,17 @@ class AuthorInformation extends StatelessWidget {
                   authorName ?? "Unknown Author",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 15,
-                    color: Colors.black87,
+                    color: Theme.of(context).textTheme.titleMedium?.color,
                   ),
                 ),
                 const SizedBox(height: 2),
                 Text(
                   formattedDate,
-                  style: const TextStyle(
-                    color: Colors.black54,
+                  style: TextStyle(
+                    color: Theme.of(context).textTheme.bodySmall?.color,
                     fontSize: 13,
                     fontWeight: FontWeight.w500,
                   ),

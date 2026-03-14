@@ -56,10 +56,11 @@ class BannerContentWidget extends StatelessWidget {
             key: ValueKey<int>(currentIndex),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w600,
               height: 1.2,
+              color: Theme.of(context).textTheme.titleMedium?.color,
             ),
           ),
         ),

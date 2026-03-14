@@ -3,10 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_now/cubit/news/news_cubit.dart';
 import 'package:news_now/cubit/news/news_state.dart';
 import 'package:news_now/widget/news/news_list/news_list_view.dart';
+import 'package:news_now/widget/news/news_list/news_card_shimmer.dart';
 
 class NewsListSection extends StatelessWidget {
-  const NewsListSection({super.key, required this.category});
+  const NewsListSection({super.key, required this.category, this.query});
   final String category;
+  final String? query;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +27,13 @@ class NewsListSection extends StatelessWidget {
             ),
           );
         } else {
-          return const SliverFillRemaining(
-            hasScrollBody: false,
-            child: Center(child: CircularProgressIndicator()),
+          return SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return const NewsCardShimmer();
+              },
+              childCount: 5,
+            ),
           );
         }
       },
