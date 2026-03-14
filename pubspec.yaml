@@ -36,7 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.9.2
   url_launcher: ^6.3.2
-  geolocator: ^14.0.2
   flutter_bloc: ^9.1.1
   flutter_launcher_icons: ^0.14.4
   equatable: ^2.0.8
@@ -72,9 +71,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/screenshots/app_pages_dark
-    - assets/screenshots/app_pages_light
-    - assets/screenshots/in_coding
+
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
